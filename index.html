@@ -287,7 +287,6 @@
             const translations = {
                 
                 "site-desc": ["চিন্তা প্রকাশ একটি জ্ঞানচর্চা কেন্দ্র যেখানে প্রকৃতি ও মানুষ বিষয়ক গভীর বিশ্লেষণ, সৃজনশীলতা এবং মানবিক দৃষ্টিভঙ্গি নিয়ে আলোচনা করা হয়। আমাদের লক্ষ্য হলো এমন একটি পরিবেশ তৈরি করা যেখানে সবাই নিরাপদে, মুক্তভাবে এবং সম্মানজনকভাবে নিজেদের চিন্তা, মতামত ও অনুভূতি শেয়ার করতে পারে।", "Chinta Prokash is a center for intellectual exploration where deep analysis, creativity, and human perspectives on nature and humanity are discussed. Our goal is to create an environment where everyone can share their thoughts, opinions, and feelings safely, freely, and respectfully."],
-                "translate-btn": ["English", "বাংলা"],
                 "nav-about": ["পরিচিতি", "About"],
                 "nav-team": ["নির্বাহী কমিটি", "Executive"],
                 "nav-members": ["সদস্য", "Members"],
@@ -335,12 +334,15 @@
                 "contact-desc7": ["স্থায়ী সদস্য: মুস্তাফিজুর রহমান মুস্তাক, মোবাইল: ০১৭১১০৬১৩৬৩", "Permanent Member: Mostafizur Rahman Mostaq, Mobile: 01711061363"],
                 "contact-desc8": ["স্থায়ী সদস্য: এ্যাড. শাহরিয়ার বাবু, মোবাইল: ০১৭১১৯৫৯১২৫", "Permanent Member: Adv. Shahriar Babu, Mobile: 01711959125"],
                 "contact-desc9": ["স্থায়ী সদস্য: বিপ্লব চন্দ্র রায়, মোবাইল: ০১৭১৬০৭৮২১২", "Permanent Member: Biplob Chandra Roy, Mobile: 01716078212"],              
-                "credits-title": ["ডিজাইন এবং ডেভেলপমেন্ট: তালহা", "Design and Development: Talha"]
+                "credits-title": ["ডিজাইন এবং ডেভেলপমেন্ট: তালহা", "Design and Development: Talha"],
+                "translate-btn": ["English", "বাংলা"]
             };
 
             for (let id in translations) {
-                document.getElementById(id).innerText = isBangla ? translations[id][0] : translations[id][1];
-            }
+            let element = document.getElementById(id);
+            if (element) {
+                element.innerText = isBangla ? translations[id][0] : translations[id][1];
+           }
         }
 </script>
 </body>
