@@ -18,15 +18,16 @@
         header {
             background: url('https://s3.gifyu.com/images/bbNmG.png') no-repeat center center/cover;
             color: black;
-            padding: 150px 10px;
+            padding: 190px 10px;
             position: relative;
-            height: 600px;
+            height: 400px;
             
         }
 
         nav ul {
             list-style: none;
             padding: 0;
+            margin-top: -200px;
         }
 
         nav ul li {
@@ -70,6 +71,10 @@
             transition: background 0.5s ease-in-out;
             width: 100%;
             font-size: 18px;
+        }
+
+        #site-desc {
+            margin-top: 150px; /* টাইটেলের নিচের অংশ আরও নিচে নামবে */
         }
 
         #about {
@@ -226,7 +231,7 @@
         function toggleLanguage() {
             isBangla = !isBangla;
             const translations = {
-                "site-title": ["চিন্তা প্রকাশ", "Chinta Prokash"],
+                
                 "site-desc": ["চিন্তা প্রকাশ একটি জ্ঞানচর্চা কেন্দ্র যেখানে প্রকৃতি ও মানুষ বিষয়ক গভীর বিশ্লেষণ, সৃজনশীলতা এবং মানবিক দৃষ্টিভঙ্গি নিয়ে আলোচনা করা হয়। আমাদের লক্ষ্য হলো এমন একটি পরিবেশ তৈরি করা যেখানে সবাই নিরাপদে, মুক্তভাবে এবং সম্মানজনকভাবে নিজেদের চিন্তা, মতামত ও অনুভূতি শেয়ার করতে পারে।", "Chinta Prokash is a center for intellectual exploration where deep analysis, creativity, and human perspectives on nature and humanity are discussed. Our goal is to create an environment where everyone can share their thoughts, opinions, and feelings safely, freely, and respectfully."],
                 "nav-about": ["পরিচিতি", "About"],
                 "nav-team": ["নির্বাহী কমিটি", "Executive"],
