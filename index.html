@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>তরুণ্য প্রকাশ</title>
+    <style>
+        /* সাধারণ স্টাইল */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            scroll-behavior: smooth;
+        }
+
+        /* হেডার স্টাইল */
+        header {
+            background: url('images/header-bg.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 60px 20px;
+            position: relative;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffeb3b;
+        }
+
+        /* ট্রান্সলেটর বোতাম */
+        .translate-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff9800;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .translate-btn:hover {
+            background: #e68900;
+        }
+
+        /* প্রতিটি সেকশনের আলাদা ব্যাকগ্রাউন্ড */
+        section {
+            padding: 40px 20px;
+            transition: background 0.5s ease-in-out;
+        }
+
+        #about { background: #f8f9fa; }
+        #team { background: #e9ecef; }
+        #members { background: #dee2e6; }
+        #contact { background: #ced4da; }
+
+        /* ফুটার */
+        footer {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .credits {
+            font-size: 14px;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="site-title">তরুণ্য প্রকাশ</h1>
+        <p id="site-desc">তরুণদের মতামত প্রকাশের উন্মুক্ত প্ল্যাটফর্ম</p>
+        <button class="translate-btn" onclick="toggleLanguage()">Translate</button>
+        <nav>
+            <ul>
+                <li><a href="#about" id="nav-about">পরিচিতি</a></li>
+                <li><a href="#team" id="nav-team">আমাদের টিম</a></li>
+                <li><a href="#members" id="nav-members">সদস্য</a></li>
+                <li><a href="#contact" id="nav-contact">যোগাযোগ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2 id="about-title">আমাদের সম্পর্কে</h2>
+        <p id="about-desc">তরুণদের মতামত প্রকাশের জন্য একটি উন্মুক্ত প্ল্যাটফর্ম।</p>
+    </section>
+
+    <section id="team">
+        <h2 id="team-title">আমাদের টিম</h2>
+        <div class="team-member">
+            <img src="images/leader.jpg" alt="নেতার ছবি">
+            <p><strong id="leader-name">নাম:</strong> জন ডো</p>
+            <p><strong id="leader-role">পদবি:</strong> প্রতিষ্ঠাতা</p>
+        </div>
+        <div class="team-member">
+            <img src="images/leader.jpg" alt="নেতার ছবি">
+            <p><strong id="leader-name">নাম:</strong> জন ডো</p>
+            <p><strong id="leader-role">পদবি:</strong> প্রতিষ্ঠাতা</p>
+        </div>
+        <div class="team-member">
+            <img src="images/leader.jpg" alt="নেতার ছবি">
+            <p><strong id="leader-name">নাম:</strong> জন ডো</p>
+            <p><strong id="leader-role">পদবি:</strong> প্রতিষ্ঠাতা</p>
+        </div>
+        <div class="team-member">
+            <img src="images/leader.jpg" alt="নেতার ছবি">
+            <p><strong id="leader-name">নাম:</strong> জন ডো</p>
+            <p><strong id="leader-role">পদবি:</strong> প্রতিষ্ঠাতা</p>
+        </div>
+    </section>
+
+    <section id="members">
+        <h2 id="members-title">আমাদের সদস্য</h2>
+        <div class="member">
+            <img src="images/member1.jpg" alt="সদস্য ছবি">
+            <p><strong id="member1-name">নাম:</strong> আলিফ রহমান</p>
+        </div>
+        <div class="member">
+            <img src="images/member2.jpg" alt="সদস্য ছবি">
+            <p><strong id="member2-name">নাম:</strong> সুমন আহমেদ</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 id="contact-title">যোগাযোগ</h2>
+        <p id="contact-desc">ইমেইল: contact@torunnyoprokash.com</p>
+        <button onclick="showMessage()">আমাদের সাথে যুক্ত হন</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 তরুণ্য প্রকাশ</p>
+        <p class="credits">ডিজাইন এবং ডেভেলপমেন্ট: <strong>তরুণ্য প্রকাশ</strong></p>
+    </footer>
+
+    <script>
+        function showMessage() {
+            alert("ধন্যবাদ! আমাদের সাথে যুক্ত হওয়ার জন্য।");
+        }
+
+        // ভাষা পরিবর্তন ফাংশন
+        let isBangla = true;
+        function toggleLanguage() {
+            isBangla = !isBangla;
+            if (isBangla) {
+                document.getElementById("site-title").innerText = "তরুণ্য প্রকাশ";
+                document.getElementById("site-desc").innerText = "তরুণদের মতামত প্রকাশের উন্মুক্ত প্ল্যাটফর্ম";
+                document.getElementById("nav-about").innerText = "পরিচিতি";
+                document.getElementById("nav-team").innerText = "আমাদের টিম";
+                document.getElementById("nav-members").innerText = "সদস্য";
+                document.getElementById("nav-contact").innerText = "যোগাযোগ";
+                document.getElementById("about-title").innerText = "আমাদের সম্পর্কে";
+                document.getElementById("about-desc").innerText = "তরুণদের মতামত প্রকাশের জন্য একটি উন্মুক্ত প্ল্যাটফর্ম।";
+                document.getElementById("team-title").innerText = "আমাদের টিম";
+                document.getElementById("leader-name").innerText = "নাম:";
+                document.getElementById("leader-role").innerText = "পদবি:";
+                document.getElementById("members-title").innerText = "আমাদের সদস্য";
+                document.getElementById("member1-name").innerText = "নাম:";
+                document.getElementById("member2-name").innerText = "নাম:";
+                document.getElementById("contact-title").innerText = "যোগাযোগ";
+                document.getElementById("contact-desc").innerText = "ইমেইল: contact@torunnyoprokash.com";
+            } else {
+                document.getElementById("site-title").innerText = "Torunnya Prokash";
+                document.getElementById("site-desc").innerText = "An open platform for young voices";
+                document.getElementById("nav-about").innerText = "About";
+                document.getElementById("nav-team").innerText = "Our Team";
+                document.getElementById("nav-members").innerText = "Members";
+                document.getElementById("nav-contact").innerText = "Contact";
+                document.getElementById("about-title").innerText = "About Us";
+                document.getElementById("about-desc").innerText = "An open platform for young voices.";
+                document.getElementById("team-title").innerText = "Our Team";
+                document.getElementById("leader-name").innerText = "Name:";
+                document.getElementById("leader-role").innerText = "Role:";
+                document.getElementById("members-title").innerText = "Our Members";
+                document.getElementById("member1-name").innerText = "Name:";
+                document.getElementById("member2-name").innerText = "Name:";
+                document.getElementById("contact-title").innerText = "Contact";
+                document.getElementById("contact-desc").innerText = "Email: contact@torunnyoprokash.com";
+            }
+        }
+    </script>
+
+</body>
+</html>
