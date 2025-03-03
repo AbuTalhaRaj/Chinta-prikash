@@ -112,23 +112,28 @@
         <h2 id="team-title">আমাদের টিম</h2>
         <div class="team-member">
             <img src="images/leader.jpg" alt="নেতার ছবি">
-            <p><strong id="leader-name">নাম:</strong> জন ডো</p>
-            <p><strong id="leader-role">পদবি:</strong> প্রতিষ্ঠাতা</p>
+            <p><strong id="leader-name-1">নাম:</strong> জন ডো</p>
+            <p><strong id="leader-role-1">পদবি:</strong> প্রতিষ্ঠাতা</p>
         </div>
         <div class="team-member">
             <img src="images/leader.jpg" alt="নেতার ছবি">
-            <p><strong id="leader-name">নাম:</strong> জন ডো</p>
-            <p><strong id="leader-role">পদবি:</strong> প্রতিষ্ঠাতা</p>
+            <p><strong id="leader-name-2">নাম:</strong> জেমস স্মিথ</p>
+            <p><strong id="leader-role-2">পদবি:</strong> সহ-প্রতিষ্ঠাতা</p>
         </div>
         <div class="team-member">
             <img src="images/leader.jpg" alt="নেতার ছবি">
-            <p><strong id="leader-name">নাম:</strong> জন ডো</p>
-            <p><strong id="leader-role">পদবি:</strong> প্রতিষ্ঠাতা</p>
+            <p><strong id="leader-name-3">নাম:</strong> জেমস স্মিথ</p>
+            <p><strong id="leader-role-3">পদবি:</strong> সহ-প্রতিষ্ঠাতা</p>
         </div>
         <div class="team-member">
             <img src="images/leader.jpg" alt="নেতার ছবি">
-            <p><strong id="leader-name">নাম:</strong> জন ডো</p>
-            <p><strong id="leader-role">পদবি:</strong> প্রতিষ্ঠাতা</p>
+            <p><strong id="leader-name-4">নাম:</strong> জেমস স্মিথ</p>
+            <p><strong id="leader-role-4">পদবি:</strong> সহ-প্রতিষ্ঠাতা</p>
+        </div>
+        <div class="team-member">
+            <img src="images/leader.jpg" alt="নেতার ছবি">
+            <p><strong id="leader-name-5">নাম:</strong> জেমস স্মিথ</p>
+            <p><strong id="leader-role-5">পদবি:</strong> সহ-প্রতিষ্ঠাতা</p>
         </div>
     </section>
 
@@ -147,7 +152,7 @@
     <section id="contact">
         <h2 id="contact-title">যোগাযোগ</h2>
         <p id="contact-desc">ইমেইল: contact@torunnyoprokash.com</p>
-        <button onclick="showMessage()">আমাদের সাথে যুক্ত হন</button>
+        <button onclick="smoothScrollToContact()">আমাদের সাথে যুক্ত হন</button>
     </section>
 
     <footer>
@@ -156,51 +161,42 @@
     </footer>
 
     <script>
-        function showMessage() {
-            alert("ধন্যবাদ! আমাদের সাথে যুক্ত হওয়ার জন্য।");
+        function smoothScrollToContact() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
         }
 
-        // ভাষা পরিবর্তন ফাংশন
         let isBangla = true;
         function toggleLanguage() {
             isBangla = !isBangla;
-            if (isBangla) {
-                document.getElementById("site-title").innerText = "তরুণ্য প্রকাশ";
-                document.getElementById("site-desc").innerText = "তরুণদের মতামত প্রকাশের উন্মুক্ত প্ল্যাটফর্ম";
-                document.getElementById("nav-about").innerText = "পরিচিতি";
-                document.getElementById("nav-team").innerText = "আমাদের টিম";
-                document.getElementById("nav-members").innerText = "সদস্য";
-                document.getElementById("nav-contact").innerText = "যোগাযোগ";
-                document.getElementById("about-title").innerText = "আমাদের সম্পর্কে";
-                document.getElementById("about-desc").innerText = "তরুণদের মতামত প্রকাশের জন্য একটি উন্মুক্ত প্ল্যাটফর্ম।";
-                document.getElementById("team-title").innerText = "আমাদের টিম";
-                document.getElementById("leader-name").innerText = "নাম:";
-                document.getElementById("leader-role").innerText = "পদবি:";
-                document.getElementById("members-title").innerText = "আমাদের সদস্য";
-                document.getElementById("member1-name").innerText = "নাম:";
-                document.getElementById("member2-name").innerText = "নাম:";
-                document.getElementById("contact-title").innerText = "যোগাযোগ";
-                document.getElementById("contact-desc").innerText = "ইমেইল: contact@torunnyoprokash.com";
-            } else {
-                document.getElementById("site-title").innerText = "Torunnya Prokash";
-                document.getElementById("site-desc").innerText = "An open platform for young voices";
-                document.getElementById("nav-about").innerText = "About";
-                document.getElementById("nav-team").innerText = "Our Team";
-                document.getElementById("nav-members").innerText = "Members";
-                document.getElementById("nav-contact").innerText = "Contact";
-                document.getElementById("about-title").innerText = "About Us";
-                document.getElementById("about-desc").innerText = "An open platform for young voices.";
-                document.getElementById("team-title").innerText = "Our Team";
-                document.getElementById("leader-name").innerText = "Name:";
-                document.getElementById("leader-role").innerText = "Role:";
-                document.getElementById("members-title").innerText = "Our Members";
-                document.getElementById("member1-name").innerText = "Name:";
-                document.getElementById("member2-name").innerText = "Name:";
-                document.getElementById("contact-title").innerText = "Contact";
-                document.getElementById("contact-desc").innerText = "Email: contact@torunnyoprokash.com";
+            const translations = {
+                "site-title": ["তরুণ্য প্রকাশ", "Torunnya Prokash"],
+                "site-desc": ["তরুণদের মতামত প্রকাশের উন্মুক্ত প্ল্যাটফর্ম", "An open platform for young voices"],
+                "nav-about": ["পরিচিতি", "About"],
+                "nav-team": ["আমাদের টিম", "Our Team"],
+                "nav-members": ["সদস্য", "Members"],
+                "nav-contact": ["যোগাযোগ", "Contact"],
+                "about-title": ["আমাদের সম্পর্কে", "About Us"],
+                "about-desc": ["তরুণদের মতামত প্রকাশের জন্য একটি উন্মুক্ত প্ল্যাটফর্ম।", "An open platform for young voices."],
+                "team-title": ["আমাদের টিম", "Our Team"],
+                "leader-name-1": ["নাম:", "Name:"],
+                "leader-role-1": ["পদবি:", "Role:"],
+                "leader-name-2": ["নাম:", "Name:"],
+                "leader-role-2": ["পদবি:", "Role:"],
+                "leader-name-3": ["নাম:", "Name:"],
+                "leader-role-3": ["পদবি:", "Role:"],
+                "leader-name-4": ["নাম:", "Name:"],
+                "leader-role-4": ["পদবি:", "Role:"],
+                "members-title": ["আমাদের সদস্য", "Our Members"],
+                "member1-name": ["নাম:", "Name:"],
+                "member2-name": ["নাম:", "Name:"],
+                "contact-title": ["যোগাযোগ", "Contact"],
+                "contact-desc": ["ইমেইল: contact@torunnyoprokash.com", "Email: contact@torunnyoprokash.com"]
+            };
+
+            for (let id in translations) {
+                document.getElementById(id).innerText = isBangla ? translations[id][0] : translations[id][1];
             }
         }
     </script>
-
 </body>
 </html>
