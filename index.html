@@ -161,8 +161,21 @@
     </footer>
 
     <script>
-        function smoothScrollToContact() {
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+        anchor.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 50, // Optional offset for better view
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
         }
 
         let isBangla = true;
@@ -197,22 +210,6 @@
                 document.getElementById(id).innerText = isBangla ? translations[id][0] : translations[id][1];
             }
         }
-    <script>
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('nav ul li a').forEach(anchor => {
-        anchor.addEventListener('click', function(event) {
-            event.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 50, // Optional offset for better view
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
 </script>
 </body>
 </html>
