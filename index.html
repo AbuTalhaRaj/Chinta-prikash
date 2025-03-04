@@ -22,28 +22,33 @@
         header {
             background: url('https://s3.gifyu.com/images/bbNmG.png') no-repeat center center/cover;
             color: white;
-            padding: 190px 10px;
-            position: relative;
-            height: 400px;
+            padding: 150px 10px;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
             
         }
 
         nav ul {
             list-style: none;
             padding: 0;
-            margin-top: -200px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         nav ul li {
-            display: inline;
-            margin: 0 15px;
+            margin: 10px 15px;
         }
 
         nav ul li a {
             color: white;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s ease;
+            font-size: 18px;
         }
 
         nav ul li a:hover {
@@ -52,17 +57,15 @@
 
         /* ট্রান্সলেটর বোতাম */
         .translate-btn {
-            position: absolute;
+            position: fixed;
             top: 10px;
             right: 10px;
             background: #ff9800;
             color: white;
             border: none;
-            padding: 8px 12px;
-            cursor: pointer;
+            padding: 10px 15px;
             font-size: 14px;
             border-radius: 5px;
-            transition: background 0.3s ease;
         }
 
         .translate-btn:hover {
@@ -71,49 +74,16 @@
 
         /* প্রতিটি সেকশনের আলাদা ব্যাকগ্রাউন্ড */
         section {
-            color: white;
-            padding: 40px 20px;
-            transition: background 0.5s ease-in-out;
-            width: 100%;
+            padding: 60px 5%;
             font-size: 18px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
-        #site-desc {
-            margin-top: 170px; /* টাইটেলের নিচের অংশ আরও নিচে নামবে */
-        }
-        
-        #about-desc {
-            margin-top: 80px; /* টাইটেলের নিচের অংশ আরও নিচে নামবে */
-        }
-        
-        #about-title {
-            margin-top: 200px; /* টাইটেলের নিচের অংশ আরও নিচে নামবে */
-        }
-
-        #about {
-            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXx1Srecg7gDajil1-VBCpP0LMGaCsbH9uAg&usqp=CAU') no-repeat center center/cover;
-            height: 800px;
-            width: 90%;
-            font-size: 20px;
-        }
-        #team { 
-            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGyuwueRNEA8PWfy9aduDHBegc8szvyTD8VBdq4G5A6A-jHX0nX_i--fg&s=10') no-repeat center center/cover;
-            height: 1000px;
-            width: 90%;
-            font-size: 20px;
-            
-        }
-        #members { 
-            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxIpC8Hho60_icRluP2sKVqpKF3dEXx_y6ng&usqp=CAU') no-repeat center center/cover;
-            height: 800px;
-            width: 90%;
-            font-size: 20px;
-        }
-        #contact { 
-            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7DYNRsUWAK6SzKeTvN7qO4NOKf6hPCdkJJA&usqp=CAU') no-repeat center center/cover;
-            height: 800px;
-            width: 90%;
-            font-size: 20px;
+        #about, #team, #members, #contact {
+            background-size: cover;
+            background-position: center;
+            min-height: 500px;
         }
 
         /* ফুটার */
@@ -121,7 +91,7 @@
             background: #007bff;
             color: white;
             padding: 10px;
-            margin-top: 0px;
+            text-align: center;
         }
 
         .credits {
