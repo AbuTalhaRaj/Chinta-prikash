@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Favicon -->
     <link rel="icon" href="https://s3.gifyu.com/images/bbNFx.jpg" type="image/png" sizes="32x32">
     
     <title>Chinta Prokash</title>
     <style>
-        /* সাধারণ স্টাইল */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -18,7 +16,6 @@
             scroll-behavior: smooth;
         }
 
-        /* হেডার স্টাইল */
         header {
             background: url('https://s3.gifyu.com/images/bb3Rb.png') no-repeat center center/cover;
             color: white;
@@ -55,7 +52,6 @@
             color: #FFFF00;
         }
 
-        /* ট্রান্সলেটর বোতাম */
         .translate-btn {
             position: fixed;
             top: 10px;
@@ -66,13 +62,14 @@
             padding: 10px 15px;
             font-size: 14px;
             border-radius: 5px;
+            cursor: pointer;
+            z-index: 9999;
         }
 
         .translate-btn:hover {
             background: #e68900;
         }
 
-        /* প্রতিটি সেকশনের আলাদা ব্যাকগ্রাউন্ড */
         section {
             padding: 60px 5%;
             font-size: 18px;
@@ -80,32 +77,83 @@
             box-sizing: border-box;
         }
 
-        #about, #team, #members, #contact {
+        #about, #Activities, #team, #members, #contact {
             background-size: cover;
             background-position: center;
             min-height: 900px;
         }
         
-        /* 🔵 ব্যাকগ্রাউন্ড থ্রিডি কালার চেঞ্জ (প্রতি 1 সেকেন্ডে) */
         @keyframes backgroundChange {
-            0% { background-color: #fc913a; }
-            25% { background-color: #000000; }
-            50% { background-color: ##008000; }
-            75% { background-color: #3aaf85; }
-            100% { background-color: #ff4e50; }
+            0% { background: #1e3c72; }
+            20% { background: #2a5298; }
+            40% { background: #ff7e5f; }
+            60% { background: #feb47b; }
+            80% { background: #43cea2; }
+            100% { background: #185a9d; }
         }
 
-        /* 🚀 থ্রিডি ব্যাকগ্রাউন্ড ইফেক্ট */
-        #about, #team, #members, #contact {
+        #about, #Activities, #team, #members, #contact {
             animation: backgroundChange 15s infinite alternate ease-in-out;
             transition: all 0.5s ease-in-out;
             padding: 60px 5%;
             color: white;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
-        
 
-        /* ফুটার */
+        #Activities {
+            animation: backgroundChange 15s infinite alternate ease-in-out;
+            transition: all 0.5s ease-in-out;
+            padding: 60px 5%;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .slider {
+            width: 100%;
+            max-width: 800px;
+            height: 350px;
+            overflow: hidden;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .slides {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            animation: slideAnimation 50s infinite ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes slideAnimation {
+            0% { transform: translateX(0%); }
+            10% { transform: translateX(-100%); }
+            20% { transform: translateX(-200%); }
+            30% { transform: translateX(-300%); }
+            40% { transform: translateX(-400%); }
+            50% { transform: translateX(-500%); }
+            60% { transform: translateX(-600%); }
+            70% { transform: translateX(-700%); }
+            80% { transform: translateX(-800%); }
+            90% { transform: translateX(-900%); }
+            100% { transform: translateX(0%); }
+        }
+
+        @keyframes backgroundChange {
+            0% { background: #1e3c72; }
+            20% { background: #2a5298; }
+            40% { background: #ff7e5f; }
+            60% { background: #feb47b; }
+            80% { background: #43cea2; }
+            100% { background: #185a9d; }
+        }
+        
         footer {
             background: #007bff;
             color: white;
@@ -128,6 +176,7 @@
         <nav>
             <ul>
                 <li><a href="#about" id="nav-about">পরিচিতি</a></li>
+                <li><a href="#Activities" id="nav-Activities">কার্যক্রম</a></li>
                 <li><a href="#team" id="nav-team">নির্বাহী কমিটি</a></li>
                 <li><a href="#members" id="nav-members">সদস্য</a></li>
                 <li><a href="#contact" id="nav-contact">যোগাযোগ</a></li>
@@ -138,6 +187,24 @@
     <section id="about">
         <h2 id="about-title">আমাদের সম্পর্কে</h2>
         <p id="about-desc">চিন্তা প্রকাশ শুধুমাত্র একটি প্ল্যাটফর্ম নয়, এটি একটি আন্দোলন, একটি নতুন দৃষ্টিভঙ্গি, যেখানে প্রতিটি চিন্তা এবং কথার মধ্যে পরিবর্তন ও উন্নতির শক্তি নিহিত এবং আমরা বিশ্বাস করি, যে কোনো সমাজের উন্নতির জন্য চিন্তার স্বাধীনতা এবং বিশ্বাসের গুরুত্ব অপরিসীম। এখানে আমরা একে অপরকে বুঝতে, শ্রদ্ধা করতে এবং নতুন ধারণাগুলোর মাধ্যমে অগ্রগতির পথ খুঁজে বের করতে সাহায্য করি।</p>
+    </section>
+
+    <section id="Activities">
+    <h2 id="Activities-title">আমাদের কার্যক্রম</h2>
+    <div class="slider">
+        <div class="slides">
+            <img src="https://s3.gifyu.com/images/bbuDt.jpg" alt="Activities 1">
+            <img src="https://s3.gifyu.com/images/bbQK0.jpg" alt="Activities 2">
+            <img src="https://s3.gifyu.com/images/bbQxP.jpg" alt="Activities 3">
+            <img src="https://s3.gifyu.com/images/bbQxX.jpg" alt="Activities 4">
+            <img src="https://s3.gifyu.com/images/bbuOK.jpg" alt="AActivities 5">
+            <img src="https://s3.gifyu.com/images/bbuON.jpg" alt="Activities 6">
+            <img src="https://s3.gifyu.com/images/bbQKx.jpg" alt="Activities 7">
+            <img src="https://s3.gifyu.com/images/bbQMb.jpg" alt="Activities 8">
+            <img src="https://s3.gifyu.com/images/bbQM8.jpg" alt="Activities 9">
+            <img src="https://s3.gifyu.com/images/bbQpO.jpg" alt="Activities 10">
+        </div>
+    </div>
     </section>
 
     <section id="team">
@@ -254,7 +321,6 @@
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
         document.querySelectorAll('nav ul li a').forEach(anchor => {
             anchor.addEventListener('click', function(event) {
                 event.preventDefault();
@@ -263,7 +329,7 @@
 
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 0, // Offset for better view
+                        top: targetElement.offsetTop - 0,
                         behavior: 'smooth'
                     });
                 }
@@ -278,10 +344,12 @@
                 "site-desc": ["চিন্তাপ্রকাশ একটি জ্ঞানচর্চা কেন্দ্র, যা প্রকৃতি ও মানুষ বিষয়ক গভীর বিশ্লেষণ, সৃজনশীলতা এবং মানবিক দৃষ্টিভঙ্গি নিয়ে কাজ করে। আমাদের দার্শনিক ভিত্তি হলো 'বস্তুনিষ্ঠ ও বিজ্ঞানসম্মত দৃষ্টিভঙ্গি', যা সত্য ও যুক্তিনির্ভর চিন্তার মাধ্যমে সমাজের উন্নতি সাধনে অনুপ্রাণিত করে।", "Chinta Prokash is a center for intellectual exploration that focuses on deep analysis, creativity, and human perspectives on nature and humanity. Our philosophical foundation is based on an 'objective and scientific perspective,' which inspires societal progress through truth and rational thinking."],
                 "translate-btn": ["English", "বাংলা"],
                 "nav-about": ["পরিচিতি", "About"],
+                "nav-Activities": ["কার্যক্রম", "Activities"],
                 "nav-team": ["নির্বাহী কমিটি", "Executive"],
                 "nav-members": ["সদস্য", "Members"],
                 "nav-contact": ["যোগাযোগ", "Contact"],
                 "about-title": ["আমাদের সম্পর্কে", "About Us"],
+                "Activities-title": ["আমাদের কার্যক্রম", "Our Activities"],
                 "about-desc": ["চিন্তা প্রকাশ শুধুমাত্র একটি প্ল্যাটফর্ম নয়, এটি একটি আন্দোলন, একটি নতুন দৃষ্টিভঙ্গি, যেখানে প্রতিটি চিন্তা এবং কথার মধ্যে পরিবর্তন ও উন্নতির শক্তি নিহিত এবং আমরা বিশ্বাস করি, যে কোনো সমাজের উন্নতির জন্য চিন্তার স্বাধীনতা এবং বিশ্বাসের গুরুত্ব অপরিসীম। এখানে আমরা একে অপরকে বুঝতে, শ্রদ্ধা করতে এবং নতুন ধারণাগুলোর মাধ্যমে অগ্রগতির পথ খুঁজে বের করতে সাহায্য করি।", "Chinta Prokash is not just a platform; it is a movement, a new perspective, where the power of change and progress lies in every thought and word. We believe that the freedom of thought and the importance of belief are essential for the development of any society. Here, we help each other understand, respect, and find the path to progress through new ideas."],
                 "team-title": ["নির্বাহী কমিটি", "Executive"],
                 "leader-name-1": ["নাম: মফিজুর রহমান রুননু", "Name: Mofizur Rahman Runnu"],
